@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telekocsi.css" type="text/css">
+    <title>Telekocsi</title>
+</head>
+
+<body>
+    <div class="tartalom">
+        <h1>Telekocsi</h1>
+        <div class="menu">
+            <ul>
+                <a href="telekocsi.html"><li>Bemutatkozás</li></a>    
+                <a href="#"><li>Sofőröknek</li></a>    
+                <a href="#"><li>Utasoknak</li> </a>   
+                <a href="#"><li>Bejelentkezés</li></a>    
+                <a href="#"><li>Regisztráció</li> </a> 
+            </ul>
+        </div>
+        <h2>Regisztráció</h2>
+        <form class="urlap">
+            <div class="urlap2">
+                <div class="doboz">
+                    <div class="bal">
+                        <label for="nev">Név:</label>
+                    </div>
+                    <div class="jobb">
+                        <input type="text" id="nev">
+                    </div>
+                </div>
+                <div class="doboz">
+                    <div class="bal">
+                        <label for="email">E-mail cím:</label>
+                    </div>
+                    <div class="jobb">
+                        <input type="text" id="email">
+                    </div>
+                </div>
+                <div class="doboz">
+                    <div class="bal">
+                        <label for="jelszo1">Jelszó:</label>
+                    </div>
+                    <div class="jobb">
+                        <input type="password" id="jelszo1">
+                    </div>
+                </div>
+                <div class="doboz">
+                    <div class="bal">
+                        <label for="jelszo2">Jelszó ismét:</label>
+                    </div>
+                    <div class="jobb">
+                        <input type="password" id="jelszo2">
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="Mentés" onclick="mentes()">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    function mentes(){
+        pass1 = document.getElementById("jelszo1").value;
+        pass2 = document.getElementById("jelszo2").value;
+
+        if(pass1!="" && pass2!=""){
+            if(pass1 == pass2){
+                alert("A jelszavak megegyeznek!");
+            }
+            else{
+                alert("A jelszavak NEM egyeznek meg!");
+            }
+        }
+    }
+</script>
+
+</html>
